@@ -1,8 +1,8 @@
 Simple Rcon Client by Mattt
 
+to run,
 node rcon.js
 
-This is still experimental,
 There is ZERO error checking - this is intentional!
 
 line 12: size and id at not important, this is the hard coded 'made up' packet, no point in converting into it each time it arrives.

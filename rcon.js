@@ -63,7 +63,7 @@ class RconConnection {
     }
   }
 }
-/* Basic Implementation | line 69: edit port, host, token | line 79 set keep alive interval (60000 = 1 minute)*/
+/* Basic Implementation | line 69: edit port, host, token | line 79 set keep alive interval (60000 = 1 minute) */
 const squadRcon = () => {
   const rcon = new RconConnection();
   rcon.connect({ port: "0", host: "0.0.0.0", token: "password" });
