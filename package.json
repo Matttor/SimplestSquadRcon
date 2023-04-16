@@ -1,0 +1,5 @@
+{
+    "name": "simplercon",
+    "main": "rcon.js",
+    "type": "module"
+}
