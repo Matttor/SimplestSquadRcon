@@ -24,7 +24,7 @@ line 21: id + 2 allows for easier debugging plus sets up for way to avoid need t
 line 47: is special packet? long if statement but efficient.
 line 58: long messages re-assembled and sent out from here.
 
-See rconWithFailover.js for tested + testable error tolerant SuqadRcon.
+See rconWithFailover.js for tested + testable error tolerant SquadRcon.
 
 Packet checks are;
 is Special packet?
