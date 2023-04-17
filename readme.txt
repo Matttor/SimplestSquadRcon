@@ -23,3 +23,15 @@ line 19: id defaults to non zero for easier debugging must be a valid positive s
 line 21: id + 2 allows for easier debugging plus sets up for way to avoid need to parse later, ie sudo id 33 = "current map" => read from index x to end"
 line 47: is special packet? long if statement but efficient.
 line 58: long messages re-assembled and sent out from here.
+
+See rconWithFailover.js for tested + testable error tolerant SuqadRcon.
+
+Packet checks are;
+is Special packet?
+has valid size value?
+is long enough to be complete?
+ends with 'null, null'?
+ID is positive 32bit sInt?
+Type is either 0,1,2 or 3?
+
+if out going text is found to contain "", this also counts as a bad packet.
