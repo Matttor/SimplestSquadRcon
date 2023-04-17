@@ -24,11 +24,11 @@ line 21: id + 2 allows for easier debugging plus sets up for way to avoid need t
 line 47: is special packet? long if statement but efficient.
 line 58: long messages re-assembled and sent out from here.
 
-See rconWithFailover.js for tested + testable error tolerant SuqadRcon.
+See rconWithFailover.js for tested + testable error tolerant SquadRcon.
 
 Packet checks are;
 is Special packet?
-has valid size value?
+has valid size value? <= rcon spec is max 4096, Squad ignores this, using 8192 is ok for now using too large a value may result in loop as data can never fill to active a decode.
 is long enough to be complete?
 ends with 'null, null'?
 ID is positive 32bit sInt?
