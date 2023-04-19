@@ -1,5 +1,5 @@
 Simple SquadRcon Client by Mattt(or),
-Simple SquadRcon Client (with filoverby) by Mattt(or),
+Simple SquadRcon Client (with fail over) by Mattt(or),
 Simple SquadRcon Client (forSquadJS) by Mattt(or),
 
 Welcome, this is intended specifically for OWI-Squad's flavour of Rcon Server
@@ -26,7 +26,7 @@ line 47: is special packet? long if statement but efficient.
 line 58: long messages re-assembled and sent out from here.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Simple SquadRcon Client (with filoverby)
+Simple SquadRcon Client (with fail over)
 
 rconWithFailover.js uncomment packetbreaker() to make 'random' bad rackets 
 
