@@ -44,9 +44,8 @@ if out going text is found to contain "", this also counts as a bad packet.
 Simple SquadRcon Client (forSquadJS)
 
 rconforSquadJS.js
-First draft, intended as straight swap for squadJS/core/rcon.js
+working draft, intended as straight swap for squadJS/core/rcon.js
 Fixes buffer overflow bug etc.
-Not tested with SquadJS yet.
 Comment/swap Logger(s) and uncomment squadJsStyle() to run as stand alone test.
 
 /* A Micro Demo in the style of SquadJS */
