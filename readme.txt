@@ -48,3 +48,20 @@ First draft, intended as straight swap for squadJS/core/rcon.js
 Fixes buffer overflow bug etc.
 Not tested with SquadJS yet.
 Comment/swap Logger(s) and uncomment squadJsStyle() to run as stand alone test.
+
+/* A Micro Demo in the style of SquadJS */
+/* 
+const squadJsStyle = async () => {
+  const getCurrentMap = async () => {
+    const response = await rcon.execute("ShowCurrentMap");
+    const match = response.match(/^Current level is (?<level>.+), layer is (?<layer>.+)/);
+    return [match.groups.level, match.groups.layer];
+  };
+  const rcon = new Rcon({ port: "00000", host: "0.0.0.0", password: "password" });
+  setTimeout(() => rcon.disconnect(), 10000);
+  await rcon.connect();
+  const layers = await getCurrentMap();
+  console.log(layers);
+};
+squadJsStyle();
+*/
