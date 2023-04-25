@@ -33,22 +33,22 @@ Welcome, this is intended specifically for OWI-Squad's flavour of Rcon Server
 ## Simple SquadRcon Client (with fail over)
 rconWithFailover.js uncomment packetbreaker() to make 'random' bad rackets 
 
-Packet checks are;
-is Special packet?
-has valid size value? <= rcon spec is max 4096, Squad ignores this, using 8192 is ok for now using too large a value may result in loop as data can never fill to active a decode.
-is long enough to be complete?
-ends with 'null, null'?
-ID is positive 32bit sInt?
-Type is either 0,1,2 or 3?
-
-if out going text is found to contain "", this also counts as a bad packet.
+* Packet checks are;
+* is Special packet?
+* has valid size value? <= rcon spec is max 4096, Squad ignores this, using 8192 is ok for now using too large a value may result in loop as data can never fill to active a decode.
+* is long enough to be complete?
+* ends with 'null, null'?
+* ID is positive 32bit sInt?
+* Type is either 0,1,2 or 3?
+* if out going text is found to contain "", this also counts as a bad packet.
 
 ## Simple SquadRcon Client (forSquadJS)
-rconforSquadJS.js
-working draft, intended as straight swap for squadJS/core/rcon.js
-Fixes buffer overflow bug etc.
-Comment/swap Logger(s) and uncomment squadJsStyle() to run as stand alone test.
+* rconforSquadJS.js
+* working draft, intended as straight swap for squadJS/core/rcon.js
+* Fixes buffer overflow bug etc.
+* Comment/swap Logger(s) and uncomment squadJsStyle() to run as stand alone test.
 
+```javascript
 /* A Micro Demo in the style of SquadJS */
 /* 
 const squadJsStyle = async () => {
@@ -65,3 +65,4 @@ const squadJsStyle = async () => {
 };
 squadJsStyle();
 */
+```
