@@ -1,14 +1,14 @@
-Simple SquadRcon Client by Mattt(or),
-Simple SquadRcon Client (with fail over) by Mattt(or),
-Simple SquadRcon Client (forSquadJS) by Mattt(or),
+## **About**
+Simple SquadRcon Client by Mattt(or)
+Simple SquadRcon Client (with fail over) by Mattt(or)
+Simple SquadRcon Client (forSquadJS) by Mattt(or)
 
 Welcome, this is intended specifically for OWI-Squad's flavour of Rcon Server
 
-install node.js
-no other dependenices.
+#### Prerequisites
+* [Node.js](https://nodejs.org/en/) - [Download](https://nodejs.org/en/)
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Simple SquadRcon Client
+## Simple SquadRcon Client
 Basic Implementation;
 | line 69: edit port( port ), host( ip ), token( password ). ((for local connections use ip "localhost")).
 | line 79: set keep alive interval ( 60000 = 1 minute ).
