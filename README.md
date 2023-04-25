@@ -1,9 +1,8 @@
 ## **About**
+Welcome, this is intended specifically for OWI-Squad's flavour of Rcon Server
 - Simple SquadRcon Client by Mattt(or)
 - Simple SquadRcon Client (with fail over) by Mattt(or)
 - Simple SquadRcon Client (forSquadJS) by Mattt(or)
-
-Welcome, this is intended specifically for OWI-Squad's flavour of Rcon Server
 
 #### Prerequisites
 * [Node.js](https://nodejs.org/en/) - [Download](https://nodejs.org/en/)
@@ -48,9 +47,8 @@ rconWithFailover.js uncomment packetbreaker() to make 'random' bad rackets
 * Fixes buffer overflow bug etc.
 * Comment/swap Logger(s) and uncomment squadJsStyle() to run as stand alone test.
 
-```javascript
+```js
 /* A Micro Demo in the style of SquadJS */
-/* 
 const squadJsStyle = async () => {
   const getCurrentMap = async () => {
     const response = await rcon.execute("ShowCurrentMap");
@@ -64,5 +62,4 @@ const squadJsStyle = async () => {
   console.log(layers);
 };
 squadJsStyle();
-*/
 ```
