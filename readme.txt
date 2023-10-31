@@ -69,11 +69,10 @@ squadJsStyle();
 Simple SquadRcon w Pass-through (forSquadJS)
 
 rconPassThroughSqJS.js
-to use with SquadJS, remane to `rcon.js` add `"passThrough": true,` to rcon options json.
-ie 
-{ "passThrough": true, "host": "ip", "port": "1234", "password": "pw" }
+to use with SquadJS, as per above, renane to `rcon.js`, replace SquadJS/core/rcon.js add `"passThrough": true,` to rcon options json.
+ie { "passThrough": true, "host": "ip", "port": "1234", "password": "pw" }
 
-Available options:
+Possible options:
 "passThrough": true, 
 "passThroughPort": 1234, 
 "passThroughTimeOut": 30000, 
