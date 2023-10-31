@@ -73,9 +73,10 @@ to use with SquadJS, as per above, renane to `rcon.js`, replace SquadJS/core/rco
 ie { "passThrough": true, "host": "ip", "port": "1234", "password": "pw" }
 
 Possible options:
-"passThrough": true, 
-"passThroughPort": 1234, 
-"passThroughTimeOut": 30000, 
+"passThrough": true,
+"passThroughPort": 1234,
+"passThroughTimeOut": 30000,
+"passThroughMaxClients": 10,
 "passThroughChallenge": "password"
 
 /* A Micro Demo in the style of SquadJS */
