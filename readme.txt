@@ -28,7 +28,7 @@ line 58: long messages re-assembled and sent out from here.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 Simple SquadRcon Client (with fail over)
 
-rconWithFailover.js uncomment packetbreaker() to make 'random' bad rackets 
+rconWithFailover.js uncomment packetbreaker() to make 'random' bad packets 
 
 Packet checks are;
 is Special packet?
@@ -64,3 +64,51 @@ const squadJsStyle = async () => {
 };
 squadJsStyle();
 */
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Simple SquadRcon w Pass-through (forSquadJS)
+
+rconPassThroughSqJS.js
+to use with SquadJS, remane to `rcon.js` add `"passThrough": true,` to rcon options json.
+ie 
+{ "passThrough": true, "host": "ip", "port": "1234", "password": "pw" }
+
+Available options:
+"passThrough": true, 
+"passThroughPort": 1234, 
+"passThroughTimeOut": 30000, 
+"passThroughChallenge": "password"
+
+/* A Micro Demo in the style of SquadJS */
+//Comment out line: `import Logger from "./logger.js";`
+//Set rcon options
+
+const Logger = {
+  level: 1,
+  verbose(type, lvl, msg, msg1 = "") {
+    if (lvl > this.level) return;
+    console.log(type, lvl, msg, msg1);
+  },
+};
+const squadJsStyle = async () => {
+  const getCurrentMap = async () => {
+    const response = await rcon.execute("ShowCurrentMap");
+    const match = response.match(/^Current level is (?<level>.+), layer is (?<layer>.+)/);
+    return [match.groups.level, match.groups.layer];
+  };
+  const rcon = new Rcon({ port: "2114", host: "127.0.0.1", password: "password", passThrough: true, passThroughPort: "8126", passThroughTimeOut: 30000, passThroughChallenge: "password" }); // <-- SET THESE OPTIONs for demo
+  try {
+    await rcon.connect();
+  } catch (e) {
+    console.warn(e);
+  }
+  rcon.interval = setInterval(async () => {
+    try {
+      const currentMap = await getCurrentMap();
+      console.log(currentMap);
+    } catch (e) {
+      console.warn(e);
+    }
+  }, 5000);
+};
+squadJsStyle();
